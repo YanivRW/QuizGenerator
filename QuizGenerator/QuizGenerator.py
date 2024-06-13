@@ -305,26 +305,11 @@ def prompt_user_to_answer(questions):
 
 
 
-
-
-#     # # response = openai.Completion.create(
-#     # #     engine="text-davinci-003",
-#     # #     prompt=prompt,
-#     # #     max_tokens=150
-#     # # )
-#     # return response.choices[0].text
-
-# def display_questions(questions):
-#     # Display the questions
-#     print("\nHere are your quiz questions:\n")
-#     print(questions)
-
 def main():
     num_questions, difficulty_level, promt_number,context  = get_user_input()
     user_prompt, system_prompt = create_prompt(num_questions, difficulty_level,promt_number, context)
     questions = get_quiz_questions(user_prompt, system_prompt)
     prompt_user_to_answer(questions)
-    #add answer function here
     
 
 if __name__ == "__main__":
